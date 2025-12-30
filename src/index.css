@@ -1,0 +1,164 @@
+/* ============================================
+   Global Reset & Base Styles
+   ============================================ */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ============================================
+   Body & Color Palette
+   Gradient color scheme from purple to red
+   for hierarchical mind map levels
+   ============================================ */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  height: 100vh;
+  
+  /* Level-based color palette - creates visual hierarchy */
+  --node-color-level-0: rgb(179, 186, 235); /* Soft purple - root level */
+  --node-color-level-1: rgb(186, 211, 238); /* Light blue */
+  --node-color-level-2: rgb(162, 220, 208); /* Teal */
+  --node-color-level-3: rgb(157, 236, 187); /* Mint green */
+  --node-color-level-4: rgb(202, 243, 166); /* Light green */
+  --node-color-level-5: rgb(255, 250, 162); /* Yellow */
+  --node-color-level-6: rgb(255, 206, 150); /* Orange */
+  --node-color-level-7: rgb(255, 159, 149); /* Coral red */
+}
+
+/* ============================================
+   Layout Containers
+   ============================================ */
+#root {
+  height: 100%;
+}
+
+/* Ensure SVG elements overflow properly for larger diagrams */
+.react-flow__viewport * {
+  overflow: visible !important;
+}
+
+/* ============================================
+   Mind Map Node Styles
+   Base styling for all custom nodes
+   ============================================ */
+#root .custom-node,
+.custom-node:focus {
+  background-color: var(--node-color-level-0);
+  border-color: var(--node-color-level-0);
+  outline: 0; /* Remove focus outline */
+  padding: 10px;
+  font-size: 9px; /* Compact text for dense mind maps */
+  border-radius: 4px; /* Slight rounding for modern look */
+  font-weight: 500;
+
+  /* Connection handle styling */
+  .react-flow__handle {
+    background-color: var(--node-color-level-0);
+    height: 8px;
+    width: 8px;
+  }
+}
+
+/* Edge (connection line) styling */
+#root .custom-edge {
+  stroke: var(--node-color-level-0);
+  stroke-width: 2px;
+}
+/* ============================================
+   Level-Specific Node Colors
+   Each level gets progressively warmer colors
+   ============================================ */
+
+/* Level 1 - Light blue */
+#root .custom-node.level-1 {
+  background-color: var(--node-color-level-1);
+  border-color: var(--node-color-level-1);
+  .react-flow__handle {
+    background-color: var(--node-color-level-1);
+  }
+}
+
+/* Level 2 - Teal */
+#root .custom-node.level-2 {
+  background-color: var(--node-color-level-2);
+  border-color: var(--node-color-level-2);
+  .react-flow__handle {
+    background-color: var(--node-color-level-2);
+  }
+}
+
+/* Level 3 - Mint green */
+#root .custom-node.level-3 {
+  background-color: var(--node-color-level-3);
+  border-color: var(--node-color-level-3);
+  .react-flow__handle {
+    background-color: var(--node-color-level-3);
+  }
+}
+
+/* Level 4 - Light green */
+#root .custom-node.level-4 {
+  background-color: var(--node-color-level-4);
+  border-color: var(--node-color-level-4);
+  .react-flow__handle {
+    background-color: var(--node-color-level-4);
+  }
+}
+
+/* Level 5 - Yellow */
+#root .custom-node.level-5 {
+  background-color: var(--node-color-level-5);
+  border-color: var(--node-color-level-5);
+  .react-flow__handle {
+    background-color: var(--node-color-level-5);
+  }
+}
+
+/* Level 6 - Orange */
+#root .custom-node.level-6 {
+  background-color: var(--node-color-level-6);
+  border-color: var(--node-color-level-6);
+  .react-flow__handle {
+    background-color: var(--node-color-level-6);
+  }
+}
+
+/* Level 7 - Coral red (deepest level) */
+#root .custom-node.level-7 {
+  background-color: var(--node-color-level-7);
+  border-color: var(--node-color-level-7);
+  .react-flow__handle {
+    background-color: var(--node-color-level-7);
+  }
+}
+
+/* ============================================
+   Download Button Styling
+   ============================================ */
+.download-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.download-btn:hover {
+  background-color: #333;
+}
+
+.download-btn:active {
+  background-color: #000;
+  transform: translateY(1px);
+}
+.react-flow__attribution {
+  display: none;
+}

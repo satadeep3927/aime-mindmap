@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>
+      AIME Mindmap - Interactive Hierarchical Mind Map Visualization
+    </title>
+    <meta
+      name="title"
+      content="AIME Mindmap - Interactive Hierarchical Mind Map Visualization"
+    />
+    <meta
+      name="description"
+      content="Create and visualize beautiful hierarchical mind maps with color-coded levels. Interactive mind mapping tool for organizing ideas, concepts, and knowledge structures."
+    />
+    <meta
+      name="keywords"
+      content="mind map, mindmap, visualization, hierarchy, knowledge graph, concept map, interactive diagram, react flow, tree diagram"
+    />
+    <meta name="author" content="AIME" />
+    <meta name="theme-color" content="#B3BAEB" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/favicon.ico" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="AIME Mindmap - Interactive Hierarchical Mind Map Visualization"
+    />
+    <meta
+      property="og:description"
+      content="Create and visualize beautiful hierarchical mind maps with color-coded levels. Interactive mind mapping tool for organizing ideas, concepts, and knowledge structures."
+    />
+    <meta property="og:image" content="/og-image.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:title"
+      content="AIME Mindmap - Interactive Hierarchical Mind Map Visualization"
+    />
+    <meta
+      property="twitter:description"
+      content="Create and visualize beautiful hierarchical mind maps with color-coded levels. Interactive mind mapping tool for organizing ideas, concepts, and knowledge structures."
+    />
+    <meta property="twitter:image" content="/og-image.png" />
+
+    <!-- Preconnect for performance optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      window.__INITIAL_MINDMAP_DATA__ = {
+        text: "Chola Dynasty",
+        children: [
+          {
+            text: "Overview",
+            children: [
+              { text: "Time Period" },
+              { text: "Geographical Extent" },
+              { text: "Significance" },
+            ],
+          },
+          {
+            text: "Political Structure",
+            children: [
+              { text: "Monarchy" },
+              { text: "Administration" },
+              { text: "Military" },
+            ],
+          },
+          {
+            text: "Cultural Contributions",
+            children: [
+              { text: "Architecture" },
+              { text: "Art and Sculpture" },
+              { text: "Literature" },
+            ],
+          },
+          {
+            text: "Economy and Trade",
+            children: [
+              { text: "Agriculture" },
+              { text: "Trade Networks" },
+              { text: "Currency" },
+            ],
+          },
+        ],
+      };
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
